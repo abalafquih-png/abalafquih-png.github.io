@@ -1,14 +1,33 @@
-<!-- FORMULARIO INTERNO DE VALORACIÓN -->
-    <section class="section-container" style="max-width: 600px; margin: 40px auto; background: var(--secondary); padding: 40px; border-radius: 8px;">
-        <h2 class="title" style="font-size: 1.8rem;">Valora nuestros servicios</h2>
-        <form class="contact-form" action="#" method="POST" style="margin-top: 20px;">
-            <input type="text" name="nombre_cliente" placeholder="Tu Nombre o Empresa" required>
-            <select name="puntuacion" style="padding: 15px; border-radius: 5px; border: 1px solid #ccc; font-size: 1rem;" required>
-                <option value="5">★★★★★ - Excelente (5/5)</option>
-                <option value="4">★★★★☆ - Muy Bueno (4/5)</option>
-                <option value="3">★★★☆☆ - Bueno (3/5)</option>
-            </select>
-            <textarea name="comentario" rows="4" placeholder="Escribe tu experiencia con MAI Asesoría..." required></textarea>
-            <button type="submit" class="btn">Enviar Valoración</button>
-        </form>
-    </section>
+<section id="valoraciones">
+    <h2 style="text-align:center; color:#0b4a8b; margin-bottom:25px;">
+        ⭐ Valora nuestro servicio
+    </h2>
+
+    <form class="review-form" action="#" method="POST">
+
+        <input type="text"
+               name="nombre_cliente"
+               placeholder="Nombre o Empresa"
+               required>
+
+        <select name="puntuacion" required>
+            <option value="">Selecciona una valoración</option>
+            <option value="5">⭐⭐⭐⭐⭐ Excelente</option>
+            <option value="4">⭐⭐⭐⭐ Muy buena</option>
+            <option value="3">⭐⭐⭐ Buena</option>
+            <option value="2">⭐⭐ Mejorable</option>
+            <option value="1">⭐ Mala</option>
+        </select>
+
+        <textarea
+            name="comentario"
+            rows="5"
+            placeholder="Cuéntanos tu experiencia con MAI Asesoría..."
+            required></textarea>
+
+        <button type="submit">
+            Enviar valoración
+        </button>
+
+    </form>
+</section>
