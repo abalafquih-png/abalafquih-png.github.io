@@ -202,3 +202,64 @@ div.form-group {
     background-color: #16a34a; /* Verde un poco más oscuro al pasar el ratón */
     transform: translateY(-2px); /* Pequeño efecto de relieve hacia arriba */
 }
+#valoraciones{
+    max-width:600px;
+    margin:60px auto;
+    padding:35px;
+    background:#fff;
+    border-radius:15px;
+    box-shadow:0 10px 30px rgba(0,0,0,.12);
+}
+
+.review-form{
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+}
+
+.review-form input,
+.review-form select,
+.review-form textarea{
+
+    width:100%;
+    padding:16px 18px;
+    border:1px solid #d8d8d8;
+    border-radius:10px;
+    font-size:16px;
+    font-family:inherit;
+    transition:.3s;
+    box-sizing:border-box;
+}
+
+.review-form input:focus,
+.review-form select:focus,
+.review-form textarea:focus{
+
+    outline:none;
+    border-color:#0b4a8b;
+    box-shadow:0 0 0 4px rgba(11,74,139,.12);
+}
+
+.review-form textarea{
+    resize:vertical;
+    min-height:150px;
+}
+
+.review-form button{
+
+    background:#0b4a8b;
+    color:#fff;
+    border:none;
+    padding:17px;
+    border-radius:10px;
+    font-size:17px;
+    font-weight:600;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.review-form button:hover{
+
+    background:#08396d;
+    transform:translateY(-2px);
+}
