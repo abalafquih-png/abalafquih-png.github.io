@@ -1,34 +1,291 @@
-<section id="valoraciones">
-    <h2 style="text-align:center; color:#0b4a8b; margin-bottom:25px;">
-        ⭐ Valora nuestro servicio
-    </h2>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <form class="review-form" action="#" method="POST">
+<title>Valoraciones | MAI Asesoría</title>
 
-        <input type="text"
-               name="nombre_cliente"
-               placeholder="Nombre o Empresa"
-               required>
+<style>
 
-        <select name="puntuacion" required>
-            <option value="">Selecciona una valoración</option>
-            <option value="5">⭐⭐⭐⭐⭐ Excelente</option>
-            <option value="4">⭐⭐⭐⭐ Muy buena</option>
-            <option value="3">⭐⭐⭐ Buena</option>
-            <option value="2">⭐⭐ Mejorable</option>
-            <option value="1">⭐ Mala</option>
-        </select>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,Helvetica,sans-serif;
+}
 
-        <textarea
-            name="comentario"
-            rows="5"
-            placeholder="Cuéntanos tu experiencia con MAI Asesoría..."
-            required></textarea>
+body{
 
-        <button type="submit">
-            Enviar valoración
-        </button>
+    background:linear-gradient(135deg,#0b4a8b,#1d74d4);
 
-    </form>
-</section>
-<a href="#inicio" class="btn-volver">⬆ Volver al inicio</a>
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:30px;
+
+}
+
+.card{
+
+    width:100%;
+    max-width:700px;
+
+    background:white;
+
+    border-radius:18px;
+
+    padding:40px;
+
+    box-shadow:0 20px 45px rgba(0,0,0,.25);
+
+}
+
+.logo{
+
+    text-align:center;
+
+    color:#0b4a8b;
+
+    font-size:34px;
+
+    font-weight:bold;
+
+}
+
+.subtitulo{
+
+    text-align:center;
+
+    color:#666;
+
+    margin-top:10px;
+
+    margin-bottom:35px;
+
+}
+
+label{
+
+    display:block;
+
+    margin-bottom:8px;
+
+    font-weight:bold;
+
+    color:#333;
+
+}
+
+input,
+select,
+textarea{
+
+    width:100%;
+
+    padding:15px;
+
+    margin-bottom:22px;
+
+    border:1px solid #ddd;
+
+    border-radius:10px;
+
+    font-size:15px;
+
+    transition:.3s;
+
+}
+
+input:focus,
+select:focus,
+textarea:focus{
+
+    outline:none;
+
+    border-color:#0b4a8b;
+
+    box-shadow:0 0 8px rgba(11,74,139,.25);
+
+}
+
+.estrellas{
+
+    display:flex;
+
+    flex-direction:row-reverse;
+
+    justify-content:flex-end;
+
+    margin-bottom:25px;
+
+}
+
+.estrellas input{
+
+    display:none;
+
+}
+
+.estrellas label{
+
+    font-size:38px;
+
+    color:#ccc;
+
+    cursor:pointer;
+
+    transition:.2s;
+
+}
+
+.estrellas label:hover,
+.estrellas label:hover ~ label,
+.estrellas input:checked ~ label{
+
+    color:#FFC107;
+
+}
+
+button{
+
+    width:100%;
+
+    padding:16px;
+
+    background:#0b4a8b;
+
+    color:white;
+
+    border:none;
+
+    border-radius:10px;
+
+    font-size:18px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+button:hover{
+
+    background:#083564;
+
+    transform:translateY(-2px);
+
+}
+
+.volver{
+
+    display:block;
+
+    margin-top:25px;
+
+    text-align:center;
+
+    text-decoration:none;
+
+    color:#0b4a8b;
+
+    font-weight:bold;
+
+}
+
+.volver:hover{
+
+    text-decoration:underline;
+
+}
+
+footer{
+
+    text-align:center;
+
+    margin-top:30px;
+
+    color:#888;
+
+    font-size:14px;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="card">
+
+<div class="logo">
+MAI ASESORÍA
+</div>
+
+<p class="subtitulo">
+Tu opinión nos ayuda a mejorar nuestros servicios.
+</p>
+
+<form>
+
+<label>Nombre o Empresa</label>
+
+<input
+type="text"
+placeholder="Escribe tu nombre o empresa"
+required>
+
+<label>Valoración</label>
+
+<div class="estrellas">
+
+<input type="radio" id="5" name="valor">
+<label for="5">★</label>
+
+<input type="radio" id="4" name="valor">
+<label for="4">★</label>
+
+<input type="radio" id="3" name="valor">
+<label for="3">★</label>
+
+<input type="radio" id="2" name="valor">
+<label for="2">★</label>
+
+<input type="radio" id="1" name="valor">
+<label for="1">★</label>
+
+</div>
+
+<label>Comentario</label>
+
+<textarea
+rows="6"
+placeholder="Cuéntanos cómo fue tu experiencia con MAI Asesoría..."
+required></textarea>
+
+<button type="submit">
+Enviar valoración
+</button>
+
+</form>
+
+<a href="index.html" class="volver">
+⬅ Volver al inicio
+</a>
+
+<footer>
+
+Gracias por confiar en MAI Asesoría.
+
+</footer>
+
+</div>
+
+</body>
+</html>
