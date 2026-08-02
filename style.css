@@ -279,3 +279,6 @@ div.form-group {
     background:#08396d;
     transform:translateY(-2px);
 }
+html{
+    scroll-behavior:smooth;
+}
