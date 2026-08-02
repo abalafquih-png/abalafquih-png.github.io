@@ -1,0 +1,204 @@
+/* --- VARIABLES Y ESTILOS BASE --- */
+:root {
+    --primary: #003366; /* Azul Marino */
+    --secondary: #f5f7fa; /* Gris Claro */
+    --accent: #005b9f; /* Azul Claro */
+    --text: #333333;
+    --white: #ffffff;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, sans-serif; }
+body { color: var(--text); line-height: 1.6; background: var(--white); }
+a { text-decoration: none; }
+ul { list-style: none; }
+
+/* --- NAVEGACIÓN Y CABECERA --- */
+.top-bar { background: var(--primary); color: var(--white); padding: 10px 5%; display: flex; justify-content: space-between; font-size: 0.9rem; }
+.top-bar a { color: var(--white); font-weight: bold; }
+header { background: var(--white); padding: 20px 5%; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 10px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 1000; }
+.logo { font-size: 1.8rem; font-weight: 700; color: var(--primary); }
+.logo span { color: var(--accent); }
+nav ul { display: flex; gap: 20px; }
+nav ul li a { color: var(--text); font-weight: 600; transition: 0.3s; padding: 5px 10px; }
+nav ul li a:hover, .active { color: var(--accent); border-bottom: 2px solid var(--accent); }
+
+/* --- CONTENIDO GENÉRICO --- */
+.hero { background: linear-gradient(rgba(0,51,102,0.85), rgba(0,51,102,0.85)), url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1920&q=80') center/cover; color: var(--white); padding: 100px 5%; text-align: center; }
+.hero-small { padding: 60px 5%; }
+.hero h1 { font-size: 3rem; margin-bottom: 20px; }
+.hero p { font-size: 1.2rem; max-width: 800px; margin: 0 auto 30px auto; }
+.btn { background: var(--accent); color: var(--white); padding: 15px 30px; font-weight: bold; border-radius: 5px; display: inline-block; transition: 0.3s; }
+.btn:hover { background: #00457a; }
+
+.section-container { padding: 60px 5%; max-width: 1200px; margin: 0 auto; }
+.title { color: var(--primary); font-size: 2.2rem; margin-bottom: 30px; text-align: center; }
+.grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-bottom: 40px; }
+.box { background: var(--secondary); padding: 30px; border-radius: 8px; border-left: 5px solid var(--accent); }
+.box h3 { color: var(--primary); margin-bottom: 15px; font-size: 1.5rem; }
+
+/* --- FORMULARIO CONTACTO --- */
+.contact-form { display: flex; flex-direction: column; gap: 15px; background: var(--secondary); padding: 40px; border-radius: 8px; }
+.contact-form input, .contact-form textarea { padding: 15px; border: 1px solid #ccc; border-radius: 5px; font-size: 1rem; width: 100%; }
+.contact-form button { border: none; cursor: pointer; width: 100%; }
+
+footer { background: #001a33; color: #8c9eae; text-align: center; padding: 20px; margin-top: 40px; }
+/* --- BOTÓN FLOTANTE DE WHATSAPP --- */
+.whatsapp-float {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #25d366;
+    color: #fff;
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 35px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+}
+.whatsapp-float:hover {
+    transform: scale(1.1);
+    color: #fff;
+}
+/* --- SECCIÓN DE TESTIMONIOS Y RESEÑAS --- */
+.testimonials {
+    padding: 80px 5%;
+    background-color: var(--white);
+    text-align: center;
+}
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.testimonial-card {
+    background-color: var(--secondary);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.03);
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-top: 4px solid var(--accent);
+}
+.testimonial-card p {
+    font-style: italic;
+    margin-bottom: 20px;
+    color: var(--text);
+}
+.client-info h4 {
+    color: var(--primary);
+    font-size: 1.1rem;
+    margin-bottom: 2px;
+}
+.client-info span {
+    font-size: 0.85rem;
+    color: #666;
+}
+.stars {
+    color: #f59e0b; /* Color dorado para las estrellas */
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+/* --- ESTILO MEJORADO PARA FORMULARIO DE RESEÑAS (by Asesor Web) --- */
+
+/* Contenedor principal del formulario */
+form {
+    font-family: 'Arial', sans-serif; /* Usa una tipografía limpia */
+    max-width: 500px; /* Un ancho máximo para que no se expanda demasiado */
+    margin: 0 auto; /* Centrar el formulario en la página */
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 12px; /* Esquinas redondeadas */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1); /* Sombra suave para efecto 3D moderno */
+}
+
+/* Título del formulario */
+form h2 {
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 24px;
+}
+
+/* Estilo de los campos de texto y área de texto */
+input[type="text"],
+textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-sizing: border-box; /* Importante para que el padding no sume ancho */
+    font-size: 16px;
+    transition: border-color 0.3s ease; /* Efecto suave al enfocar el campo */
+}
+
+/* Efecto al hacer clic en un campo */
+input[type="text"]:focus,
+textarea:focus {
+    border-color: #3498db; /* Color principal de tu marca (ej. azul) */
+    outline: none;
+}
+
+/* Estilo del menú desplegable de estrellas (Lo que pediste cambiar) */
+select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    font-size: 16px;
+}
+
+/* Estilo del botón "Enviar" */
+button[type="submit"] {
+    width: 100%;
+    padding: 15px;
+    background-color: #3498db; /* Color principal de tu marca (ej. azul) */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Efecto hover del botón (al pasar el ratón por encima) */
+button[type="submit"]:hover {
+    background-color: #2980b9; /* Un tono más oscuro al pasar el ratón */
+}
+
+/* Alinear los elementos para que queden bien en formato bloque */
+div.form-group {
+    margin-bottom: 15px;
+}	
+/* --- ESTILO PARA EL BOTÓN DE RESEÑAS DE GOOGLE --- */
+.btn-resena-google, a.btn-resena-google {
+    display: inline-block;
+    background-color: #22c55e; /* Un verde moderno y llamativo */
+    color: #ffffff;
+    padding: 14px 28px;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(34, 197, 94, 0.25);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.btn-resena-google:hover {
+    background-color: #16a34a; /* Verde un poco más oscuro al pasar el ratón */
+    transform: translateY(-2px); /* Pequeño efecto de relieve hacia arriba */
+}

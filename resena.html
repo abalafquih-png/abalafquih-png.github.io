@@ -1,0 +1,14 @@
+<!-- FORMULARIO INTERNO DE VALORACIÓN -->
+    <section class="section-container" style="max-width: 600px; margin: 40px auto; background: var(--secondary); padding: 40px; border-radius: 8px;">
+        <h2 class="title" style="font-size: 1.8rem;">Valora nuestros servicios</h2>
+        <form class="contact-form" action="#" method="POST" style="margin-top: 20px;">
+            <input type="text" name="nombre_cliente" placeholder="Tu Nombre o Empresa" required>
+            <select name="puntuacion" style="padding: 15px; border-radius: 5px; border: 1px solid #ccc; font-size: 1rem;" required>
+                <option value="5">★★★★★ - Excelente (5/5)</option>
+                <option value="4">★★★★☆ - Muy Bueno (4/5)</option>
+                <option value="3">★★★☆☆ - Bueno (3/5)</option>
+            </select>
+            <textarea name="comentario" rows="4" placeholder="Escribe tu experiencia con MAI Asesoría..." required></textarea>
+            <button type="submit" class="btn">Enviar Valoración</button>
+        </form>
+    </section>
